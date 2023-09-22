@@ -14,6 +14,10 @@ syn match lalrpopTerminal '\'\S\+\''
 " LALRPOP Actions (Rust code blocks)
 syn region lalrpopAction start="{" end="}"
 
+syn region lalrpopAction start="{" end="}" contained
+syn match lalrpopActionContent "\w\+" contained within=lalrpopAction
+hi def link lalrpopActionContent Identifier
+
 " LALRPOP Macros
 syn match lalrpopMacro "\w\+!(.\+)"
 
