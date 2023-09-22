@@ -1,13 +1,15 @@
 " LALRPOP Comments
+
 syn match lalrpopComment "//.*$"
 syn region lalrpopCommentBlock start="/\*" end="\*/"
 
 " LALRPOP Nonterminals
 syn match lalrpopNonterminal "^\w\+:"
+syn region lalrpopNonterminal start="^\w\+:" end=";"
 
 " LALRPOP Terminals
-syn match lalrpopTerminal "\".\+\""
-syn match lalrpopTerminal '\'.\+\''
+syn match lalrpopTerminal "\"[^\"]\+\""
+syn match lalrpopTerminal '\'\S\+\''
 
 " LALRPOP Actions (Rust code blocks)
 syn region lalrpopAction start="{" end="}"
