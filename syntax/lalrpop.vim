@@ -1,5 +1,7 @@
 " LALRPOP Comments
 
+syn match lalrpopUse "^use .\+;$"
+
 syn match lalrpopComment "//.*$"
 syn region lalrpopCommentBlock start="/\*" end="\*/"
 
