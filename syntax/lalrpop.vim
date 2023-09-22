@@ -25,3 +25,5 @@ hi def link lalrpopNonterminal Identifier
 hi def link lalrpopTerminal String
 hi def link lalrpopAction Special
 hi def link lalrpopMacro Macro
+hi def link lalrpopUse Comment
+
